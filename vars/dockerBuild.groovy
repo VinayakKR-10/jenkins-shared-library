@@ -5,7 +5,7 @@ def call() {
             stage ('Checkout code') {
                 steps {
                     checkout ([$class: 'GitSCM', 
-                               branches: [[name: '*/master']],   
+                               branches: [[name: '*/main']],   
                                userRemoteConfigs: [[credentialsId: '<gitCredentials>', 
                                url: '<gitRepoURL>']]])
                 }
